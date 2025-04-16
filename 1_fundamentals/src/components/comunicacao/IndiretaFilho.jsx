@@ -2,6 +2,8 @@ import React from "react";
 // eslint-disable-next-line
 export default (props) => {
   const cb = props.quandoClicar;
+  const gerarIdade = () => parseInt(Math.random() * 20) + 50;
+  const gerarNerd = () => Math.random() > 0.5;
   return (
     <div>
       <div>Filho</div>
@@ -12,7 +14,7 @@ export default (props) => {
       >
         Fornecer informacao
       </button>
-      <button onClick={(_) => cb("Caio", 33, false)}>
+      <button onClick={(_) => cb("Caio", gerarIdade(), gerarNerd())}>
         Fornecer informacao
       </button>
     </div>

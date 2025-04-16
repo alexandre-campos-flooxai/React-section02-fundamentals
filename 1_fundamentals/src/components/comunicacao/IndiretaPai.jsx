@@ -1,14 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import IndiretaFilho from "./IndiretaFilho";
 // eslint-disable-next-line
 export default (props) => {
-  // nome, idade, nerd
+  const [nome, setNome] = useState("?");
+  const [idade, setIdade] = useState(0);
+  const [nerd, setNerd] = useState(false);
+
   function forneceInformacoes(nome, idade, nerd) {
-    console.log(nome, idade, nerd);
+    setNome(nome);
+    setIdade(idade);
+    setNerd(nerd);
   }
   return (
     <div>
-      pai
+      <div>
+        <span>{nome}</span>
+        <span>{idade}</span>
+        <span>{nerd ? "Verdadeirao" : "Falso"}</span>
+      </div>
       <IndiretaFilho quandoClicar={forneceInformacoes}></IndiretaFilho>
     </div>
   );
