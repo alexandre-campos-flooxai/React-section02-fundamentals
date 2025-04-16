@@ -1,6 +1,8 @@
 import React from "react";
 import "./App.css";
 
+import UsuarioInfo from "./components/condicional/UsuarioInfo";
+import ParouImpar from "./components/condicional/ParouImpar";
 import TabelaProdutos from "./repeticao/TabelaProdutos";
 import ListaAlunos from "./repeticao/ListaAlunos";
 import Familia from "./components/basicos/Familia";
@@ -17,6 +19,10 @@ export default () => {
     <div className="App">
       <h1>Fundamentos React</h1>
       <div className="Cards">
+        <Card titulo="#08 - Rederizacao" color="#50232e">
+          <ParouImpar numero={20}></ParouImpar>
+          <UsuarioInfo usuario={{ nome: "Alex" }}></UsuarioInfo>
+        </Card>
         <Card titulo="#07 - Tabela de produtos" color="#79451d">
           <TabelaProdutos></TabelaProdutos>
         </Card>
